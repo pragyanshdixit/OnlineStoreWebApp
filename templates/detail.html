@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="{{ url_for('static', filename='img/favicon.ico') }}" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -20,13 +20,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
     <!-- Libraries Stylesheet -->
-    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='lib/owlcarousel/assets/owl.carousel.min.css') }}" rel="stylesheet">
 
     <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet">
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -41,7 +41,7 @@
             </div>
             <div class="col-lg-6">
                 <div class="d-flex align-items-center justify-content-center">
-                    <a href="index.html" class="navbar-brand ms-lg-5">
+                    <a href="{{ url_for('index') }}" class="navbar-brand ms-lg-5">
                         <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Farm</span>Fresh</h1>
                     </a>
                 </div>
@@ -61,7 +61,7 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-primary navbar-dark shadow-sm py-3 py-lg-0 px-3 px-lg-5">
-        <a href="index.html" class="navbar-brand d-flex d-lg-none">
+        <a href="{{ url_for('index') }}" class="navbar-brand d-flex d-lg-none">
             <h1 class="m-0 display-4 text-secondary"><span class="text-white">Farm</span>Fresh</h1>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -69,21 +69,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav mx-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Home</a>
-                <a href="about.html" class="nav-item nav-link">About</a>
-                <a href="service.html" class="nav-item nav-link">Service</a>
-                <a href="product.html" class="nav-item nav-link">Product</a>
+                <a href="{{ url_for('index') }}" class="nav-item nav-link">Home</a>
+                <a href="{{ url_for('about') }}" class="nav-item nav-link">About</a>
+                <a href="{{ url_for('service') }}" class="nav-item nav-link">Service</a>
+                <a href="{{ url_for('product') }}" class="nav-item nav-link">Product</a>
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                     <div class="dropdown-menu m-0">
-                        <a href="blog.html" class="dropdown-item">Blog Grid</a>
-                        <a href="detail.html" class="dropdown-item active">Blog Detail</a>
-                        <a href="feature.html" class="dropdown-item">Features</a>
-                        <a href="team.html" class="dropdown-item">The Team</a>
-                        <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                        <a href="{{ url_for('blog') }}" class="dropdown-item">Blog Grid</a>
+                        <a href="{{ url_for('detail') }}" class="dropdown-item active">Blog Detail</a>
+                        <a href="{{ url_for('feature') }}" class="dropdown-item">Features</a>
+                        <a href="{{ url_for('team') }}" class="dropdown-item">The Team</a>
+                        <a href="{{ url_for('testimonial') }}" class="dropdown-item">Testimonial</a>
                     </div>
                 </div>
-                <a href="contact.html" class="nav-item nav-link">Contact</a>
+                <a href="{{ url_for('contact') }}" class="nav-item nav-link">Contact</a>
             </div>
         </div>
     </nav>
@@ -113,10 +113,10 @@
                 <div class="mb-5">
                     <div class="row g-5 mb-5">
                         <div class="col-md-6">
-                            <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ url_for('static', filename='img/blog-1.jpg') }}" alt="">
                         </div>
                         <div class="col-md-6">
-                            <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
+                            <img class="img-fluid w-100" src="{{ url_for('static', filename='img/blog-2.jpg') }}" alt="">
                         </div>
                     </div>
                     <h1 class="mb-4">Diam dolor est labore duo ipsum clita sed et lorem tempor duo</h1>
@@ -230,27 +230,27 @@
                     <h2 class="mb-4">Recent Post</h2>
                     <div class="bg-primary p-4">
                         <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0" src="img/blog-1.jpg" style="width: 75px;" alt="">
+                            <img class="img-fluid flex-shrink-0" src="{{ url_for('static', filename='img/blog-1.jpg') }}" style="width: 75px;" alt="">
                             <a href="" class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit
                             </a>
                         </div>
                         <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0" src="img/blog-2.jpg" style="width: 75px;" alt="">
+                            <img class="img-fluid flex-shrink-0" src="{{ url_for('static', filename='img/blog-2.jpg') }}" style="width: 75px;" alt="">
                             <a href="" class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit
                             </a>
                         </div>
                         <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0" src="img/blog-3.jpg" style="width: 75px;" alt="">
+                            <img class="img-fluid flex-shrink-0" src="{{ url_for('static', filename='img/blog-3.jpg') }}" style="width: 75px;" alt="">
                             <a href="" class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit
                             </a>
                         </div>
                         <div class="d-flex overflow-hidden mb-3">
-                            <img class="img-fluid flex-shrink-0" src="img/blog-1.jpg" style="width: 75px;" alt="">
+                            <img class="img-fluid flex-shrink-0" src="{{ url_for('static', filename='img/blog-1.jpg') }}" style="width: 75px;" alt="">
                             <a href="" class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit
                             </a>
                         </div>
                         <div class="d-flex overflow-hidden">
-                            <img class="img-fluid flex-shrink-0" src="img/blog-2.jpg" style="width: 75px;" alt="">
+                            <img class="img-fluid flex-shrink-0" src="{{ url_for('static', filename='img/blog-2.jpg') }}" style="width: 75px;" alt="">
                             <a href="" class="d-flex align-items-center bg-white text-dark fs-5 fw-bold px-3 mb-0">Lorem ipsum dolor sit amet elit
                             </a>
                         </div>
@@ -260,7 +260,7 @@
 
                 <!-- Image Start -->
                 <div class="mb-5">
-                    <img src="img/blog-1.jpg" alt="" class="img-fluid rounded">
+                    <img src="{{ url_for('static', filename='img/blog-1.jpg') }}" alt="" class="img-fluid rounded">
                 </div>
                 <!-- Image End -->
 
@@ -314,7 +314,7 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-envelope-open text-white me-2"></i>
-                                <p class="text-white mb-0">info@example.com</p>
+                                <p class="text-white mb-0"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="c4adaaa2ab84a1bca5a9b4a8a1eaa7aba9">[email&#160;protected]</a></p>
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-white me-2"></i>
@@ -380,15 +380,7 @@
 
 
     <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/counterup/counterup.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
-
-</html>
+    <script src="{{ url_for('static', filename='lib/easing/easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='lib/waypoints/waypoints.min.js') }}"></s
